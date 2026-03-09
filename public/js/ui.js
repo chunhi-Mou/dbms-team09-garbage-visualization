@@ -205,9 +205,8 @@ function renderDbMeta(meta) {
             ? '<option value="">Không có bảng</option>'
             : layers
                 .map((layer, index) => {
-                  return `<option value="${index}">${escapeHtml(layer.layer)} (${escapeHtml(
-                    layer.table
-                  )})</option>`;
+                  const label = layer.table || layer.layer || `Layer ${index + 1}`;
+                  return `<option value="${index}">${escapeHtml(label)}</option>`;
                 })
                 .join("")
         }

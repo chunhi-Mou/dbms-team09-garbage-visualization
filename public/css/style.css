@@ -279,6 +279,11 @@ body {
   font-size: 0.82rem;
 }
 
+.meta-select option {
+  background: #f3f7fc;
+  color: #142437;
+}
+
 .meta-selected {
   display: grid;
   gap: 8px;
